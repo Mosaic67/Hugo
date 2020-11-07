@@ -3,5 +3,6 @@ params:
  defaultTheme: dark
  # defaultTheme: auto 
  ShowShareButtons: true
- ShowToc: true
- TocOpen: true
+ socialIcons: # optional
+  - name: "telegram"
+    url: "https://t.me/NanoSpook"
