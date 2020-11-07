@@ -2,7 +2,7 @@ baseURL = "https://spook.vercel.app/"
 # languageCode = "zh-CN"
 defaultContentLanguage = "cn"
 title = "Spook's Blog"
-theme = "ananke"
+theme = "hugo-PaperMod"
 
 #分页
 Paginate = 5
