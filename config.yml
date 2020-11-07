@@ -1,4 +1,5 @@
 params:
     # defaultTheme: light
     defaultTheme: dark
-    # defaultTheme: auto # to switch between dark or light according to browser theme
+    # defaultTheme: auto 
+    ShowShareButtons: true
