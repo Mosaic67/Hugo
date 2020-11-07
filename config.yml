@@ -1,8 +1,10 @@
 params:
   # defaultTheme: light
- defaultTheme: dark
+ defaultTheme: "dark"
+ description: "一个描述"
  # defaultTheme: auto 
  ShowShareButtons: true
  socialIcons: # optional
   - name: "telegram"
     url: "https://t.me/NanoSpook"
+ env: "production"
