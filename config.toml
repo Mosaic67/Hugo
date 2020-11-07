@@ -16,5 +16,5 @@ ShowShareButtons= true
     ShowReadingTime= true
     ShowShareButtons= true
 [socialIcons]
-    name= github
+    name= "github"
     url= 'https://github.com/'
