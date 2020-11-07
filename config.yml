@@ -1,5 +1,7 @@
 params:
-    # defaultTheme: light
-    defaultTheme: dark
-    # defaultTheme: auto 
-    ShowShareButtons: true
+  # defaultTheme: light
+ defaultTheme: dark
+ # defaultTheme: auto 
+ ShowShareButtons: true
+ ShowToc: true
+ TocOpen: true
