@@ -1,4 +1,11 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://spook.vercel.app/"
+# languageCode = "zh-CN"
+defaultContentLanguage = "cn"
+title = "Spook's Blog"
 theme = "ananke"
+
+#分页
+Paginate = 5
+
+#emoji
+enableEmoji = true
