@@ -1,0 +1,26 @@
+baseURL = "https://spook.vercel.app/"
+# languageCode = "zh-CN"
+defaultContentLanguage = "cn"
+title = "Spook's Blog"
+theme = "hugo-PaperMod"
+
+#分页
+Paginate = 5
+
+#emoji
+enableEmoji = true
+
+ShowShareButtons= true
+
+[params]
+    defaultTheme= "dark"
+    disableThemeToggle= true
+    ShowReadingTime= true
+    ShowShareButtons= true
+    [[params.socialIcons]]
+        name = "github"
+        url = 'https://github.com/'
+    [[params.socialIcons]]
+        name = "telegram"
+        url = 'https://t.me/NanoSpook'
+    
