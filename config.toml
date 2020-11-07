@@ -9,3 +9,12 @@ Paginate = 5
 
 #emoji
 enableEmoji = true
+defaultTheme= "dark"
+ShowShareButtons= true
+
+[params]
+    ShowReadingTime= true
+    ShowShareButtons= true
+[socialIcons]
+    name= github
+    url= 'https://github.com/'
