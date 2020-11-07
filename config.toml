@@ -9,3 +9,12 @@ Paginate = 5
 
 #emoji
 enableEmoji = true
+
+[[params.social]]
+name = "email"
+url  = "mailto:nanospook@qq.com"
+
+[[params.social]]
+name = "telegram"
+url  = "https://t.me/NanoSpook"
+
