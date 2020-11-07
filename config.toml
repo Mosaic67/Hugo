@@ -9,12 +9,18 @@ Paginate = 5
 
 #emoji
 enableEmoji = true
-defaultTheme= "dark"
+
 ShowShareButtons= true
 
 [params]
+    defaultTheme= "dark"
+    disableThemeToggle= true
     ShowReadingTime= true
     ShowShareButtons= true
-[socialIcons]
-    name= "github"
-    url= 'https://github.com/'
+    [[params.socialIcons]]
+        name = "github"
+        url = 'https://github.com/'
+    [[params.socialIcons]]
+        name = "telegram"
+        url = 'https://t.me/NanoSpook'
+    
