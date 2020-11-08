@@ -180,6 +180,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.social]                                         # 社交链接
     a-email = "mailto:nanospook@qq.com"
+    b-telegram = "https://t.me/NanoSpook"
     # b-stack-overflow = "http://localhost:1313"
     # c-twitter = "http://localhost:1313"
     # d-facebook = "http://localhost:1313"
