@@ -2,7 +2,9 @@
 date: "2020-11-07T04:08:54+08:00" 
 title: "去除WinRaR广告"
 draft: false
-summary: "去除每次打开压缩文件弹出的广告"
+tags: ['Windwos','WinRAR','去除广告']
+description: "去除每次打开压缩文件弹出的广告"
+postMetaInFooter: true
 comments: true
 ---
 
