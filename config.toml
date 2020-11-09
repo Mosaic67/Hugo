@@ -421,7 +421,7 @@ enableEmoji = true
         # XMPP = ""
         # Matrix = ""
         # Bilibili = "xxxx"
-        Email = "nanospook@qq.com""
+        Email = "mailto:nanospook@qq.com""
         RSS = true
 
   # [languages.fr]
