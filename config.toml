@@ -79,7 +79,7 @@ enableEmoji = true
         pre = "<i class='fas fa-user'></i>"
         post = ""
         name = "关于"
-        url = "/about.md"
+        url = "/about"
         title = ""
         weight = 5
       [[languages.zh-cn.menu.main]]
@@ -142,9 +142,9 @@ enableEmoji = true
           # 主页显示头像的 URL
           avatarURL = "/avatar/avatar2.svg"
           # 主页显示的网站标题 (支持 HTML 格式)
-          title = "Savino's Blog"
+          title = ""
           # 主页显示的网站副标题
-          subtitle = "一个分享生活的博客"
+          subtitle = "一个分享简洁、优雅生活的博客"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号
@@ -365,7 +365,7 @@ enableEmoji = true
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       # 是否使侧边目录自动折叠展开
-      auto = true
+      auto = false
     # Code config
     # 代码配置
     [params.page.code]
