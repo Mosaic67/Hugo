@@ -41,44 +41,45 @@ enableEmoji = true
     # 菜单配置
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
-        identifier = "posts"
-        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-        pre = ""
-        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        identifier = "home"
+        pre = "<i class='fas fa-home'></i>"
         post = ""
-        name = "所有文章"
-        url = "/posts/"
+        name = "主页"
+        url = "/"
         title = ""
         weight = 1
       [[languages.zh-cn.menu.main]]
+        identifier = "posts"
+        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        pre = "<i class='fas fa-file-alt'></i>"
+        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        post = ""
+        name = "文档"
+        url = "/posts/"
+        title = ""
+        weight = 2
+      [[languages.zh-cn.menu.main]]
         identifier = "tags"
-        pre = ""
+        pre = "<i class='fas fa-tags'></i>"
         post = ""
         name = "标签"
         url = "/tags/"
         title = ""
-        weight = 2
+        weight = 3
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
-        pre = ""
+        pre = "<i class='fas fa-folder-open'></i>"
         post = ""
         name = "分类"
         url = "/categories/"
         title = ""
-        weight = 3
-      [[languages.zh-cn.menu.main]]
-        identifier = "documentation"
-        pre = ""
-        name = "文档"
-        url = "/categories/documentation/"
-        title = ""
         weight = 4
       [[languages.zh-cn.menu.main]]
         identifier = "about"
-        pre = ""
+        pre = "<i class='fas fa-user'></i>"
         post = ""
         name = "关于"
-        url = "/about/"
+        url = "/about.md"
         title = ""
         weight = 5
       [[languages.zh-cn.menu.main]]
@@ -139,7 +140,7 @@ enableEmoji = true
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = ""
           # 主页显示头像的 URL
-          avatarURL = "/logo/logo.svg"
+          avatarURL = "/avatar/avatar2.svg"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = "Savino's Blog"
           # 主页显示的网站副标题
@@ -277,7 +278,7 @@ enableEmoji = true
     enable = true
     # Custom content (HTML format is supported)
     # 自定义内容 (支持 HTML 格式)
-    custom = '<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>'
+    custom = '<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次&nbsp;|&nbsp;</span><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>'
     # whether to show Hugo and theme info
     # 是否显示 Hugo 和主题信息
     hugo = true
@@ -556,7 +557,7 @@ enableEmoji = true
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
     # 每一步的打字速度 (单位是毫秒)
-    speed = 300
+    speed = 200
     # blinking speed of the cursor (measured in milliseconds)
     # 光标的闪烁速度 (单位是毫秒)
     cursorSpeed = 1000

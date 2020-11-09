@@ -3,7 +3,7 @@ date: "2020-11-07T04:08:54+08:00"
 title: "去除WinRaR广告"
 draft: false
 tags: ['Windwos','WinRAR','去除广告']
-categories: ['Windows优化及技巧']
+categories: ['Windows']
 description: "去除每次打开压缩文件弹出的广告"
 postMetaInFooter: true
 comments: true
@@ -11,7 +11,7 @@ comments: true
 
 #### :open_file_folder:准备工作
 
-    *<u>**[工具下载](https://spook.vercel.app/WinRAR/WinRAR去除广告.rar)**</u>*
+    **[工具下载](https://spook.vercel.app/WinRAR/WinRAR去除广告.rar)**
 
 1. 解压`WinRAR去除广告.rar`，双击`WinRAR.KeyGen.exe`，点击`Save Licenses`，选择WinRaR存储目录。  
 
