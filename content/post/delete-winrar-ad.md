@@ -8,7 +8,7 @@ comments: true
 
 #### :open_file_folder:准备工作
 
-[工具下载](https://spook.vercel.app/WinRAR/WinRAR去除广告.rar)
+    *<u>**[工具下载](https://spook.vercel.app/WinRAR/WinRAR去除广告.rar)**</u>*
 
 1. 解压`WinRAR去除广告.rar`，双击`WinRAR.KeyGen.exe`，点击`Save Licenses`，选择WinRaR存储目录。  
 
