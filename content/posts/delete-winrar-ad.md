@@ -16,7 +16,7 @@ comments: true
 
 #### 工具下载
 
-    点击[工具下载](https://spook.vercel.app/WinRAR/WinRAR去除广告.rar)，将下载文件解压。
+    点击[工具下载](https://savino.vercel.app/WinRAR/WinRAR去除广告.rar)，将下载文件解压。
 
 #### 安装许可
   运行`WinRAR.KeyGen.exe`，点击`Save Licenses`，选择WinRAR存储目录。  
