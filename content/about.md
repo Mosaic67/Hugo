@@ -6,4 +6,5 @@ hiddenFromHomePage: true
 hiddenFromSearch: true
 ---
 
-- 123
+
+{{< music auto="https://music.163.com/#/discover/toplist?id=2250011882"  autoplay="true">}}
