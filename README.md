@@ -4,10 +4,6 @@ This directory is a brief example of a [Hugo](https://gohugo.io/) app that can b
 
 ## Deploy Your Own
 
-Deploy your own Hugo project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/master/examples/hugo)
-
 _Live Example: https://hugo.now-examples.now.sh_
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6eeefa39-50d3-4c94-a11a-98d40c294300/deploy-status)](https://app.netlify.com/sites/spook/deploys)
