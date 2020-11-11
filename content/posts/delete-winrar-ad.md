@@ -3,7 +3,7 @@ date: "2020-11-07T04:08:54+08:00"
 title: "去除WinRaR广告"
 draft: false
 summary: "一个教你完美去除WinRAR广告的教程"
-featuredImage: "/WinRAR/winrar.jpg"
+featuredImage: "/WinRAR/winrar.webp"
 tags: ['Windwos','WinRAR','去除广告']
 categories: ['Windows']
 description: "去除每次打开压缩文件弹出的广告"
