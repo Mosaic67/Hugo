@@ -127,9 +127,9 @@ enableEmoji = true
         # 是否在搜索索引中使用基于 baseURL 的绝对路径
         absoluteURL = false
         [languages.zh-cn.params.search.algolia]
-          index = "Savino"
-          appID = "1NFCW7Q332"
-          searchKey = "9cbfed17b24f227cdb52fe6ce3641397"
+          index = "netlify_6eeefa39-50d3-4c94-a11a-98d40c294300_master_all"
+          appID = "RILQ5R9KRW"
+          searchKey = "9ff0be12d621c96788c5695a5cde8c6b"
       # 主页信息设置
       [languages.zh-cn.params.home]
         # RSS 文章数目
