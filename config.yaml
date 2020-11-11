@@ -1,0 +1,13 @@
+---
+baseurl: "https://savino.me/"
+DefaultContentLanguage: "zh-cn"
+hasCJKLanguage: true
+languageCode: "zh-cn"
+title: "Savino's blog"
+theme: "loveit"
+metaDataFormat: "yaml"
+algolia:
+  index: "Savino"
+  key: "174bb9ba6ef39b00880fadc1426b781d"
+  appID: "1NFCW7Q332"
+---

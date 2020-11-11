@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Mosaic67/Hugo/issues"
   },
-  "homepage": "https://github.com/Mosaic67/Hugo#readme"
+  "homepage": "https://github.com/Mosaic67/Hugo#readme",
+  "dependencies": {
+    "hugo-algolia": "^1.2.14"
+  }
 }
