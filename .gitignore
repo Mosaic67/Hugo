@@ -1,4 +1,2 @@
 .env
 .env.build
-public/
-node_modules/

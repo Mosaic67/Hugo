@@ -7,7 +7,6 @@ featuredImage: "/WinRAR/winrar.webp"
 tags: ['Windwos','WinRAR','去除广告']
 categories: ['Windows']
 description: "去除每次打开压缩文件弹出的广告"
-postMetaInFooter: true
 comments: true
 ---
 
