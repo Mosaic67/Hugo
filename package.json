@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Mosaic67/Hugo#readme",
   "dependencies": {
+    "atomic-algolia": "^0.3.19",
     "hugo-algolia": "^1.2.14"
   }
 }
