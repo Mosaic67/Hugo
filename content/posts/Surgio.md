@@ -1,0 +1,282 @@
+---
+date: "2020-11-12"
+title: "机场自定义规则神器-Surgio"
+draft: false
+summary: "买了机场，用Clash或Surge不满意它的规则，想用机场的节点，但是想自定义规则，答案就在这篇文章中"
+description: "将机场的规则自定义"
+featuredImage: "/Surgio/surgio-icon.webp"
+tags: ['Windwos', 'Clash', 'Surgio', '机场']
+categories: ['Surgio']
+---
+
+{{< admonition title="劝退"  >}}
+以下内容需有一定动手能力及对JavaScript有了解的同学操作。
+{{< /admonition >}}
+
+
+## [](#) 使用场景
+
+你是否遇到过这样的**难题**？
+
+> 买了**机场**，用[Clash](https://github.com/Dreamacro/clash)或[Surge](https://nssurge.com/)等其他客户端[^1]，不满意机场的规则，想用机场的节点，但是想**自定义规则**
+
+[^1]:包括Surge、Quantumult 、QuantumultX、Clash 客户端。
+
+自定义规则的**好处**？
+
+{{< image src="/Surgio/proxy-groups.webp" caption="个性化Proxy、添加Emoji" height="600" width="300"  >}} 
+
+{{< image src="/Surgio/country.webp" caption="添加节点国旗" height="600" width="600"  >}}
+
+> 如果这就是你想要的，那就接着往下看吧。
+
+## [](#) 一站式各类代理规则生成器 - Surgio [:(fab fa-github):](https://github.com/surgioproject/surgio) [:(fab fa-telegram):](https://t.me/surgiogroup)
+
+简单点来说，就是将机场的订阅链接中的节点提取出来组合你定制的规则生成Clash或Surge可用的配置文件，如下图所示。
+
+{{< mermaid >}}
+graph LR;
+    A(机场订阅) -->|提取节点| C(Surgio)
+    B(自定义规则模板) --> C([Surgio])
+    C -->|生成规则| D(客户端可用配置文件)
+{{< /mermaid >}}
+
+## [](#) 开始使用
+
+### [](#) 安装Node.js
+
+{{< admonition type=info title="提示" >}}
+如果已安装可跳过
+{{< /admonition >}}
+
+[前往下载Node.js](https://nodejs.org/zh-cn/download/)
+
+### [](#) 新建一个配置仓库
+
+```shell
+# 安装
+npm init surgio-store my-rule-store
+
+# 或 使用国内镜像安装
+npm init surgio-store my-rule-store --use-cnpm
+
+# 来到仓库目录
+cd my-rule-store
+```
+
+### []() 术语解释
+
+#### Provider -- 提供方
+
+节点的提供方，可以是一个订阅地址也可以是一组节点的配置。
+
+#### Template -- 模板
+
+Surgio 根据模板来渲染指定的文件。
+
+#### Artifact -- 产品
+
+Surgio 生成出的规则就是「产品」。
+
+
+### 目录结构
+
+```shell{5-7}
+./my-rule-store
+├── node_modules
+├── package-lock.json
+├── package.json
+├── provider
+├── surgio.conf.js
+└── template
+```
+
+你只需要关心 *surgio.conf.js*, *provider* 和 *template* 三个东西。
+
+仓库中已经包含了一些用于演示的代码。
+
+### 生成规则
+
+规则已经生成到`dist`目录了。
+
+![规则生成图](/Surgio/surgio_generate.webp)
+
+### 如何自定义
+
+推荐想使用 Surgio 的朋友先熟悉一下三大件 Artifact, Provider 和 Template 分别包含什么功能再尝试自定义。
+
+Surgio 提供了一个新建组件的助手命令，你可以通过它来初始化想要的组件。
+
+```shell
+npx surgio new [artifact|provider|template]
+```
+
+### 样例
+
+除了你使用 init 命令生成的初始仓库之外，你还可以在[这里](https://github.com/geekdada/surgio/tree/master/examples)找到其它使用样例。
+
+### 升级 Surgio
+
+确保你当前的版本和新版没有兼容性问题后，运行下面命令即可。
+```shell
+npm install surgio@latest
+```
+升级 API 网关
+```shell
+npm install @surgio/gateway@latest
+```
+### 配置文件
+
+Surgio 的配置文件位于目录内的`surgio.conf.js`。
+
+> 更多定制化需求请查阅官方文档。
+
+### 官方文档
+
+前往查看[官方文档](https://surgio.js.org/)
+
+## [](#) 进阶
+
+### 快速搭建托管 API
+
+> 你是否遇到机场频繁更新节点？
+
+但是每次都得在本地使用`npx surgio generate`来生成配置文件。
+
+> 你是否想将Surgio生成的规则也想机场那样可以下载并且可以点击更新。
+
+下面这个教程教你如何使用 Vercel 来托管 API。
+
+#### 准备
+
+1. 注册一个[Vercel](https://vercel.com/)账号
+2. 可以不绑定付款方式
+
+#### 配置
+
+1. 首先，安装工具链。
+
+```shell
+npm i -g vercel
+```
+
+2. 在项目中安装`@surgio/gateway`。
+```shell
+npm i @surgio/gateway --save
+```
+
+3. 登录账号。
+```shell
+vercel login
+```
+4. 在根目录下新建文件`vercel.json`
+```json
+{
+  "version": 2,
+  "public": false,
+  "builds": [
+    { 
+      "src": "/gateway.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "provider/**",
+          "template/**",
+          "*.js",
+          "*.json"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/gateway.js"
+    }
+  ]
+}
+```
+5. 修改`package.json`中增加如下字段：
+```json
+{
+  "engines": {
+    "node": ">=12"
+  }
+}
+```
+#### 编写云函数
+
+1. 新建文件`gateway.js`。
+
+```js
+'use strict';
+
+const gateway = require('@surgio/gateway');
+
+module.exports = gateway.createHttpServer();
+```
+
+#### 配置接口鉴权
+
+{{< admonition type=warning title="提示" >}}
+不建议关闭鉴权！
+{{< /admonition >}}
+
+在`surgio.conf.js`中增加如下字段：
+
+```js
+module.exports = {
+  gateway: {
+    auth: true,
+    accessToken: 'YOUR_PASSWORD',
+  },
+}
+```
+#### 部署
+
+```shell
+vercel --prod
+```
+
+终端会弹出如下问题：
+```
+? Set up and deploy “E:\xxxx\xxxx”? [Y/n] Y
+? Which scope do you want to deploy to? xxxx
+? Link to existing project? [y/N] N
+? What’s your project’s name? xxxx
+? In which directory is your code located? ./
+```
+
+- Set up and deploy：输入`Y`
+
+- Which scope do you want to deploy to：直接回车
+
+- Link to existing project：输入`N`
+
+- What’s your project’s name：回车或输入小写字母（大写会报错）
+
+- In which directory is your code located：回车
+
+> 弹出以下界面表示部署成功。
+
+{{< image src="/Surgio/Success.webp" caption="部署成功" height="600" width="600"  >}}
+
+为了让托管地址保持一致，你需要到`surgio.conf.js`把 urlBase 更新为：
+
+```js
+https://xxxxxx.xxx.vercel.app/get-artifact/
+```
+
+最后，再运行一次
+
+```shell
+vercel --prod
+```
+
+打开上图最后一行网址 `https://xxxx.vercel.app/` 即可看到托管界面，如下图所示。
+
+{{< image src="/Surgio/surgio_vercel.webp" caption="部署成功" height="600" width="600"  >}}
+
+点击`ADD TO CLASHX/CFW`按键即可一键托管。
+
+也就意味着使用机场的节点加你个性化的规则生成的规则可一键托管了，若机场节点更新，直接点击客户端更新就行，不用再手动`npx surgio generate`来生成规则了。
