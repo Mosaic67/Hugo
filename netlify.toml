@@ -1,6 +1,6 @@
 [build]
  publish = "public"
- command = "hugo --gc --minify && npm install hugo-algolia"
+ command = "hugo --gc --minify && npm install hugo-algolia && hugo-algolia -s"
 
 [context.production.environment]
  HUGO_VERSION = "0.78.1"
