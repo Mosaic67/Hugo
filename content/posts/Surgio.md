@@ -97,6 +97,8 @@ Surgio 生成出的规则就是「产品」。
 
 ### 生成规则
 
+执行`npx surgio generate`来生成规则。
+
 规则已经生成到`dist`目录了。
 
 ![规则生成图](/Surgio/surgio_generate.webp)
@@ -196,7 +198,7 @@ vercel login
   ]
 }
 ```
-5. 修改`package.json`中增加如下字段：
+5. 修改`package.json`中如下字段：
 ```json
 {
   "engines": {
@@ -238,18 +240,20 @@ module.exports = {
 vercel --prod
 ```
 
-终端会弹出如下问题：
+终端会弹出如下问题，你需依次回答：
 ```
-? Set up and deploy “E:\xxxx\xxxx”? [Y/n] Y
-? Which scope do you want to deploy to? xxxx
-? Link to existing project? [y/N] N
-? What’s your project’s name? xxxx
-? In which directory is your code located? ./
+? Set up and deploy “E:\xxxx\xxxx”? [Y/n]
+? Which scope do you want to deploy to?
+? Link to existing project? [y/N]
+? What’s your project’s name?
+? In which directory is your code located?
 ```
+
+> 如果你第一次使用Vercel进行托管，或者对于托管没有任何经验的话，请按如下答复。
 
 - Set up and deploy：输入`Y`
 
-- Which scope do you want to deploy to：直接回车
+- Which scope do you want to deploy to：回车
 
 - Link to existing project：输入`N`
 
