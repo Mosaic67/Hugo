@@ -10,11 +10,11 @@
         <title>
             {{- block "title" . }}{{ .Site.Title }}{{ end -}}
         </title>
-
+        <script async defer data-domain="savino.me" src="https://plausible.io/js/plausible.js"></script>
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
-        <script async defer data-domain="savino.me" src="https://plausible.io/js/plausible.js"></script>
+        
     </head>
     <body header-desktop="{{ .Site.Params.header.desktopMode }}" header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
